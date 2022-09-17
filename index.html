@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./qrcodejs-master/qrcode.min.js"></script>
+    <script src="./js/app.js" defer></script>
+    <title>QR Creator</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container container--px">QR Generator</div>
+    </header>
+    <main>
+        <div class="grid main container container--px">
+            <div class="main__input">
+                <h1>QR Code Generator</h1>
+                <p>QR Codes make it easy for smartphone users to access your website or link simply and quickly</p>
+                <p>Enter your URL below to generate a QR Code and download the image</p>
+                <form action="" id="generate-form">
+                    <input type="url" id="url" placeholder="Enter URL" value="http://">
+                    <select id="size">
+                        <option value="100">100 x 100</option>
+                        <option value="200">200 x 200</option>
+                        <option value="300" selected>300 x 300</option>
+                        <option value="400">400 x 400</option>
+                        <option value="500">500 x 500</option>
+                        <option value="600">600 x 600</option>
+                        <option value="700">700 x 700</option>
+                        <option value="800">800 x 800</option>
+                        <option value="900">900 x 900</option>
+                    </select>
+                    <!-- <input type="color" id="background-color" placeholder="Background Color">
+                    <input type="color" id="dots-color" placeholder="Dots Color"> -->
+                    <button type="submit" class="button">Generate Qr Code</button>
+                </form>
+            </div>
+            <div class="main__qr">
+                <!-- Loading SVG and generated QR image goes in the default img tag below... or replaces it -->
+
+                <!-- Default Img -->
+                <img src="./img/qr.jpg" alt="" id="default">
+
+                <!-- Loading SVG -->
+                <img src="./img/loading.svg" alt="" id="spinner">
+
+                <!-- QR Code -->
+                <div id="qrcode">
+                    
+                </div>
+                <div class="main__download">
+                    <a href="#" class="button download">Save Image</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
